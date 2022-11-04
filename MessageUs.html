@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html style="background-color: aqua">
+<head>
+    <title>Home Page</title>
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <script type="text/javascript">
+
+     function ValidationControl(){
+   var name =document.getElementById("_NMessage").value;
+   var surname=document.getElementById("_SMessage").value; 
+   var IDNo = document.getElementById("_IMessage").value;
+   var Address = document.getElementById("_AMessage").value;
+   var gmail = document.getElementById("_gGmail").value;
+   var celNO = document.getElementById("_CMessage").value;
+   var Room = document.getElementById("_RoomNo").value;
+   var message = document.getElementById("_Message").value;
+   if(name=="" || isNaN(name)==false)
+        {
+         alert("Name cant'be left empty or contain a number");
+            document.getElementById("_NMessage").focus();
+             return false;             
+          }
+       else if(surname=="" || isNaN(surname)==false)
+               {
+                   alert("Surname cant'be left empty or contain a number");
+              document.getElementById("_SMessage").focus();
+              return false;
+             
+               }
+       else if (IDNo=="" || isNaN(IDNo)==true || IDNo.length <13 || IDNo.length >13)
+           {
+                alert("IDNo can't be left empty or contain less or more than 13 digits");
+            document.getElementById("_IMessage").focus();
+            return false;          
+          }
+     else if (Address=="")
+        {
+               alert("Please provide us with your current address");
+            document.getElementById("_AMessage").focus();
+            return false;
+             
+          }
+      else if(gmail=="")
+          {
+                alert("Please fill in your email so we can contact you.");
+           document.getElementById("_gGmail").focus();
+           return false;
+           
+            }
+       else if(celNO=="" || isNaN(celNO)==true || celNO.length <10 || celNO.length >10)
+               {
+                alert("Cell No cant be left empty or contain words or be less or more than 10 digits");
+               document.getElementById("_CMessage").focus();
+               return false;
+               }
+         else if(Room=="Select the room Num below")
+             {
+                 alert("Please select available room");
+                 document.getElementById("_RoomNo").focus();
+                 return false;
+             }
+             
+       else if(message=="")
+           {
+                alert("Please prvide us with a short description about yourself");
+               document.getElementById("_Message").focus();
+               return false;
+              
+           }
+     else
+           {
+               alert("Thank you for sending us your message, please email us your Satified ID copy, payment slip(3 monthly slips)");
+            }
+               
+                        
+    }
+    
+    </script>
+               
+    <div style="color: blueviolet">
+        <a href="index.html">Home Page</a><br><a href="AboutUs.html">AboutUs</a><br><a href="Rentals.html">Rooms/Apartment</a><br><a href="MessageUs.html">MessageUS</a>
+    </div>
+     <div style="text-align: center">
+    <img src="Logo.jpg" width="200px" height="150px" alt="">
+    </div>
+    <div>
+    <h1 style="text-align: center"><u>Place your online application below</u></h1>
+    </div>
+    </head>
+    <body>
+        
+        <section id="">
+        <fieldset id="Message">
+            <legend>Enter your details here..</legend>
+            <form name="" id="" method="post" onsubmit="return ValidationControl();" action="mailto:bryce23@gmail.com">
+                 <label for="name">Name:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="_NMessage" name="" placeholder="Enter your Name here"><br>
+                 <label for="Surname">Surname:</label><input type="text" id="_SMessage" name="" placeholder="Enter your Surname"><br>
+                 <label for="IDNo">ID Num:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="_IMessage" name="" placeholder="Enter your IDNo here"><br>
+                 <label for="Address">Current Address:</label><input type="text" id="_AMessage" name="" placeholder="Enter your Address here"><br>
+                 <label for="Email">Email:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="email" id="_gGmail" name="" placeholder="Enter your gmail@ here"><br>
+                 <label for="Cell Number">Cell number:</label><input type="tel" id="_CMessage" name="" placeholder="Enter your cellNo: here"><br>
+                <label for="Room num">Rooms Num:</label>
+                <select id="_RoomNo"><option>Select the room Num below</option>
+            <option>No:1</option>    
+            <option>No:2</option>
+                    <option disabled>No:3</option>
+                    <option>No:4</option>
+                    <option>No:5</option>
+                    <option>No:6</option>
+                    <option>No:7</option>
+                    <option>No:8</option>
+                    <option>No:9</option>
+                </select><br>
+                 <label for="name">Message:</label><br><textarea rows="10" cols="45" id="_Message" placeholder="Enter" maxlength="210">
+                </textarea><br>
+                <input type="submit" value="Submit"><input type="reset" value="Clear">
+            </form>
+            </fieldset>
+        </section>
+        <section style="color: blueviolet"><br>
+        <p>We will respond your messages within 7 days<br>Fell free to call us anytime of day by clicking <a href="tel:+270647017955"> Here</a> </p>
+            <p>Clich <a href="index.html">Here</a> to go bach to the homepage</p>
+        </section>
+        <div style="color: brown; text-align: center">
+        <p>Copyright &copy;2022|Designed by MB Lediga(#084)</p>
+        </div>
+    
+    </body>
+</html>
